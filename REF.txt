@@ -7,3 +7,13 @@ Create a pipeline with AWS CodePipeline
 	Point CodeCommit to your public repo (use github version 2)
 	Build with CodeBuild (likely mvn in your buildspec)
 	Deploy to ElasticBeanstalk
+
+	https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-cli-create-build-spec.html
+
+	post_build:
+        commands:
+          - echo Build completed on `date`
+          - mv target/Http_Intro-1.0-SNAPSHOT.war ROOT.war
+    artifacts:
+      files:
+        - ROOT.war
