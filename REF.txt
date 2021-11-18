@@ -1,0 +1,9 @@
+Build a CI/CD Pipeline! Your instructions are as follows:
+
+Create a public github repository on your own account for the web application that you created for yesterdays EC2 exercise.
+	Push your code to the repository
+	Create a YAML file in the project root (call it buildspec.yml)
+Create a pipeline with AWS CodePipeline
+	Point CodeCommit to your public repo (use github version 2)
+	Build with CodeBuild (likely mvn in your buildspec)
+	Deploy to ElasticBeanstalk
